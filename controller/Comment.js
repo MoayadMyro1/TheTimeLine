@@ -18,12 +18,6 @@ const addcomment = (req, res) => {
     let comment = new commentModel(req.body);
     comment.save()
         .then( () => {
-            // res.render('index', {
-            //     userName: 'sam',
-            //     isAdmin: false,
-            //     allUsers: allUsers,
-            //     result: 'user has been added'
-            // })
             res.redirect('/')
         })
         .catch(err => {
