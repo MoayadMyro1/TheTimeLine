@@ -5,8 +5,6 @@ const homePage = async (req, res) => {
     await commentModel.find()
             .then( result => {
                 res.render('index', {
-                    userName: 'sam',
-                    isAdmin: true,
                     allcomments: result,
                     result: ''
                 });
